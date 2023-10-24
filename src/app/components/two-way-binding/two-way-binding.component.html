@@ -1,0 +1,36 @@
+
+<div class="container bg-light p-2">
+    <h2>two-way-binding works!</h2>
+
+
+    <input type="text" placeholder="Enter You Message" (input)="StoreMessage($event)" [value]="inputMessage">
+
+    <p>You Message echo:  {{inputMessage}}</p>
+
+    <button (click)="clear()">clear message</button>
+</div>
+
+<div class="container bg-light p-2">
+
+    <img [src]="currentImage">
+
+    <button (click)="next()">Next</button>
+</div>
+
+
+<div class="container bg-light p-2">
+
+    <form (submit)="PrintFormData()">
+        <input type="text" placeholder="Enter name" name="name" [(ngModel)]="formName"> 
+        <input type="text" placeholder="Enter address" name="address" [(ngModel)]="formAddress">
+        <input type="number" placeholder="Enter age" name="age" [(ngModel)]="formAge">
+
+        <input type="submit" value="Register">
+    </form>
+
+    <p>
+        Form Data:
+        {{formName}} : {{formAddress}} : {{formAge}}
+    </p>
+</div>
+

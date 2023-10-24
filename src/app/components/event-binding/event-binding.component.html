@@ -1,0 +1,21 @@
+
+
+<hr>
+<p>pass primitive data (string)</p>
+<button class="btn btn-warning" (click)="printMessage('btn2')">Click Me</button>
+<hr>
+<p >pass event arguments</p>
+<button class="btn btn-warning" (click)="printMessage2($event)">Click Me</button>
+<hr>
+<h2>Reference to element in Angular</h2>
+<p #myP>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At, inventore laboriosam. Minus voluptas temporibus architecto nemo laudantium minima! Eos impedit vero dicta harum, unde eveniet expedita nam corrupti odio nostrum!
+</p>
+
+<button class="btn btn-warning" (click)="printMessage3(myP)">Click Me</button> 
+<hr>
+
+<h2>View Child</h2>
+<div #myDiv>
+    <p>Test View Child</p>
+</div>
